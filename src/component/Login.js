@@ -22,7 +22,7 @@ const Login = () => {
             />
             <button type="submit"> Login</button>
             <div>
-              Create an Account <Link> Signup</Link>
+              Create an Account <Link to='/'> Signup</Link>
             </div>
             <div className="google-login">
               <div className="or-container">

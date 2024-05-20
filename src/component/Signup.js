@@ -24,7 +24,7 @@ const signup = () => {
             />
             <button type="submit"> Signup</button>
             <div>
-              Already have Account? <Link> Login</Link>
+              Already have Account? <Link to='/login'> Login</Link>
             </div>
             <div className="google-login">
               <div className="or-container">
