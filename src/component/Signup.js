@@ -23,8 +23,8 @@ const signup = () => {
               placeholder=" Password"
             />
             <button type="submit"> Signup</button>
-            <div>
-              Already have Account? <Link to='/login'> Login</Link>
+            <div className='already'>
+              Already have Account? <Link to="/login"> Login</Link>
             </div>
             <div className="google-login">
               <div className="or-container">
@@ -43,6 +43,7 @@ const signup = () => {
                 Continue with Google
               </div>
             </div>
+            
           </form>
         </div>
       </div>
