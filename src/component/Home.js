@@ -13,15 +13,16 @@ const Home = () => {
       <div>
         <div className="form">
           <Signup />
-        </div>
-        <div>
-          Already have account? <a>Login</a>
-        </div>
-        <div className='google'>
-        <img src='/google.svg' width={30} height={30}
-          alt='google img'
-        />
-          Continue  with Google 
+
+          <div className="google-login">
+            <div>
+              Already have account? <a>Login</a>
+            </div>
+            <div className="google">
+              <img src="/google.svg" width={30} height={30} alt="google img" />
+              Continue with Google
+            </div>
+          </div>
         </div>
       </div>
     </div>
