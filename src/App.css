@@ -101,6 +101,9 @@ gap: 40px;
   width: 100%;
   margin: 20px 0;
 }
+.signup-head{
+  text-align: center;
+}
 
 .line {
   flex: 1;

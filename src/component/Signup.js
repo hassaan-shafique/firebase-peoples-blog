@@ -1,14 +1,12 @@
 import React from 'react'
+import Login from './Login';
 
 const signup = () => {
   return (
     <>
       <div className="signup">
         <form className="signup-form">
-          <div className='btns'>
-            <button> Signup</button>
-            <button> Login</button>
-          </div>
+          <h2 className='signup-head'>Join us Today, Signup</h2>
           <label for="username">Name: </label>
           <input type="text" id="name" name="username" placeholder=" Name" />
           <label for="username">Email: </label>
