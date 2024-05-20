@@ -17,19 +17,19 @@ const Home = () => {
       </div>
 
       <div>
-      <div className="form-container">
-      
-     
-    
-    </div>
+       
 
-        
         <div className="form">
           <Signup />
 
           <div className="google-login">
-          OR
-           
+          
+            <div className="or-container">
+              <div className="line"></div>
+              <div className="or-text">OR</div>
+              <div className="line"></div>
+            </div>
+
             <div className="google">
               <img src="/google.svg" width={30} height={30} alt="google img" />
               Continue with Google
