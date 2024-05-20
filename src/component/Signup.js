@@ -4,31 +4,25 @@ const signup = () => {
   return (
     <>
       <div className="signup">
-        <form className='signup-form'>
+        <form className="signup-form">
+          <div className='btns'>
+            <button> Signup</button>
+            <button> Login</button>
+          </div>
           <label for="username">Name: </label>
-          <input
-            type="text"
-            id="name"
-            name="username"
-            placeholder="write your Name"
-          />
+          <input type="text" id="name" name="username" placeholder=" Name" />
           <label for="username">Email: </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="write your Email"
-          />
+          <input type="email" id="email" name="email" placeholder=" Email" />
           <label for="username">Password: </label>
           <input
             type="password"
             id="password"
             name="password"
-            placeholder="write your Password"
+            placeholder=" Password"
           />
-          <button type='submit'> Signup</button>
-
+          <button type="submit"> Signup</button>
         </form>
+    
       </div>
     </>
   );
