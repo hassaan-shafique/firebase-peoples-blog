@@ -22,7 +22,7 @@ const Login = () => {
             />
             <button type="submit"> Login</button>
             <div>
-              Create an Account <Link to='/'> Signup</Link>
+              Create an Account <Link to="/"> Signup</Link>
             </div>
             <div className="google-login">
               <div className="or-container">
@@ -31,15 +31,17 @@ const Login = () => {
                 <div className="line"></div>
               </div>
 
-              <div className="google">
-                <img
-                  src="/google.svg"
-                  width={30}
-                  height={30}
-                  alt="google img"
-                />
-                Continue with Google
-              </div>
+              
+                <button className='google-btn'>
+                  <img
+                    src="/google.svg"
+                    width={25}
+                    height={25}
+                    alt="google img"
+                  />
+                  Continue with Google
+                </button>
+              
             </div>
           </form>
         </div>

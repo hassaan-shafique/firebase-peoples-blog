@@ -33,15 +33,18 @@ const signup = () => {
                 <div className="line"></div>
               </div>
 
-              <div className="google">
+              
+                <button className='google-btn'>
                 <img
                   src="/google.svg"
-                  width={30}
-                  height={30}
+                  width={25}
+                  height={25}
                   alt="google img"
                 />
                 Continue with Google
-              </div>
+                </button>
+              
+
             </div>
             
           </form>

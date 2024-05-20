@@ -67,20 +67,18 @@ background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
   margin-left: 150px;
 
 }
-.google{
+
+.google-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   width: 300px;
-  height: 45px;
-  background-color: #dbdbdb;
-  border: 1px solid rgb(195, 190, 190);
-border-radius: 8px;
-color:black;
-font: 600;
-font-size: 19px;
-font: bold;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 40px;
+    height: 45px;
+    font: 600;
+      font-size: 19px;
+      font: bold;
+      cursor: pointer;
 }
 .google-login{
 
