@@ -148,7 +148,9 @@ nav{
     text-align: center;
     line-height: 3rem;
     border: 1px solid #ccc;
-    border-radius: 8px;
+   
+border-bottom-left-radius: 50px 20px;
+border-bottom-right-radius: 50px 20px;
 
 }
 
@@ -156,6 +158,12 @@ nav{
   position: absolute;
   right: 10px;
 top:40px;
+cursor: pointer;
 }
+.link{
+ text-decoration: none;
+ font-size: 16px;
+}
+
 
 

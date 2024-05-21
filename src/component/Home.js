@@ -35,10 +35,10 @@ const Home = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="/profile">Profile</Link>
+                <Link className='link' to="/profile">Profile</Link>
               </li>
               <li>
-                <Link to="/">Logout</Link>
+                <Link  className='link' to="/">Logout</Link>
               </li>
             </ul>
           )}
