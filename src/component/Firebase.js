@@ -1,19 +1,15 @@
-import firebase from "firebase/app";
-import "firebase/firestore"; 
-import "firebase/auth"; 
+
+
+import { initializeApp } from "firebase/app";
+
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID", 
+  apiKey: "AIzaSyD6hjz8EFryOD3C9Sn9DJXKJVNquIdW37g",
+  authDomain: "crud-app-react-ab87b.firebaseapp.com",
+  projectId: "crud-app-react-ab87b",
+  storageBucket: "crud-app-react-ab87b.appspot.com",
+  messagingSenderId: "809454890698",
+  appId: "1:809454890698:web:617b7b2694d8f972d3ce33"
 };
 
-
-firebase.initializeApp(firebaseConfig);
-
-export const firestore = firebase.firestore(); 
-export const auth = firebase.auth(); 
+export const app = initializeApp(firebaseConfig);
