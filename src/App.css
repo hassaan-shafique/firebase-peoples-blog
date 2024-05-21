@@ -135,3 +135,27 @@ nav{
   font-size: 18px;
 }
 
+
+.dropdown-menu{
+  background-color: #ccc;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+    top: 94px;
+    right: 20px;
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    line-height: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+}
+
+.navbar-right img{
+  position: absolute;
+  right: 10px;
+top:40px;
+}
+
+

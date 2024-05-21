@@ -38,15 +38,11 @@ const Home = () => {
                 <Link to="/profile">Profile</Link>
               </li>
               <li>
-                <Link to="/signup">Logout</Link>
+                <Link to="/">Logout</Link>
               </li>
             </ul>
           )}
-          {/* <button onClick={toggleDropdown}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </button> */}
+         
         </div>
        
       </nav>
