@@ -1,18 +1,55 @@
 import React from 'react';
-import Signup from '../component/Signup.js'
-import Login from "../component/Login.js";
+import { useState } from 'react';
 import {Link} from 'react-router-dom'
+
 
 
   
 
 const Home = () => {
+   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+   const toggleDropdown = () => {
+     setIsDropdownOpen(!isDropdownOpen);
+   };
  
 
   
   return (
     <>
-      <h1>Welcome To Home Page</h1>
+      <nav className="navbar">
+        <div className="navbar-left">
+          <span className="welcome-text">Welcome, User Name!</span>
+        </div>
+
+        <div className="navbar-right">
+          <img
+            src="profile.svg"
+            width={35}
+            height={35}
+            alt="Profile Picture"
+            className="profile-image"
+            onClick={toggleDropdown}
+          />
+
+          {isDropdownOpen && (
+            <ul className="dropdown-menu">
+              <li>
+                <Link to="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link to="/signup">Logout</Link>
+              </li>
+            </ul>
+          )}
+          {/* <button onClick={toggleDropdown}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button> */}
+        </div>
+       
+      </nav>
     </>
   );
 }

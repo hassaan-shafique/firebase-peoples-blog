@@ -118,4 +118,20 @@ background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
 
 
 /* main home */
+nav{
+  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+  width: 100% auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px 20px;
+ 
+  
+}
+.welcome-text{
+  color: white;
+  font: 800;
+  font-size: 18px;
+}
 
