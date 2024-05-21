@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <nav className="navbar">
         <div className="navbar-left">
-          <span className="welcome-text">Welcome, User Name!</span>
+          <span className="welcome-text">Welcome, User Name</span>
         </div>
 
         <div className="navbar-right">

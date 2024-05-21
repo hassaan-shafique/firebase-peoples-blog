@@ -121,13 +121,19 @@ background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
 nav{
   background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
   width: 100% auto;
-  height: 70px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:20px 20px;
- 
-  
+
+
+}
+.navbar-left{
+  padding-left: 20px;
+
+}
+.navbar-right{
+  padding-right: 20px;
 }
 .welcome-text{
   color: white;
@@ -140,7 +146,7 @@ nav{
   background-color: #ccc;
   height: 100px;
   position: absolute;
-  width: 100px;
+  width: 180px;
     top: 94px;
     right: 20px;
     padding: 10px;
