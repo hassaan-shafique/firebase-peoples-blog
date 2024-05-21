@@ -12,9 +12,20 @@ const signup = () => {
           <form className="signup-form">
             <h2 className="signup-head">Join us Today, Signup</h2>
             <label for="username">Name: </label>
-            <input type="text" id="name" name="username" placeholder=" Name" />
+
+            <input 
+            type="text" 
+            id="name" 
+            name="username" 
+            placeholder=" Name" 
+            />
             <label for="username">Email: </label>
-            <input type="email" id="email" name="email" placeholder=" Email" />
+            <input 
+            type="email"
+             id="email"
+              name="email" 
+              placeholder=" Email"
+               />
             <label for="username">Password: </label>
             <input
               type="password"

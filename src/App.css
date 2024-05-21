@@ -58,10 +58,14 @@ background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
   0px;
 
 }
-.home-img{
+.home-img img{
  display: flex;
  justify-content: start;
+ width:700px;
+ max-height: 912px;
+ max-width: 100%;
 }
+
 
 .form{
   margin-left: 150px;
