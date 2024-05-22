@@ -43,7 +43,6 @@ const signup = () => {
                 <div className="or-text">OR</div>
                 <div className="line"></div>
               </div>
-           <link></link>
               
                 <button className='google-btn'>
                 <img
