@@ -32,7 +32,7 @@ const Login = () => {
 
       .catch((error) => {
         console.error("Error logging in:", error);
-        
+
         
         
       });
@@ -47,6 +47,7 @@ const Login = () => {
 
         <div className="signup">
           <form className="signup-form">
+          
             <h2 className="signup-head">Welcome Back, Login Here</h2>
             <label >Email: </label>
             <input 
