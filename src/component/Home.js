@@ -20,7 +20,7 @@ const Home = () => {
     <>
       <nav className="navbar">
         <div className="navbar-left">
-          <span className="welcome-text">Welcome, User</span>
+          <span className="welcome-text">Welcome, Hassaan Shafique</span>
         </div>
 
         <div className="navbar-right">
