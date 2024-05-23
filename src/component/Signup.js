@@ -11,6 +11,7 @@ const Signup = () => {
   const [name,setName] =useState ("");
     const [email, setEmail] = useState(""); 
   const [password,setPassword] = useState ("");
+   const [message, setMessage] = useState(null);
   const navigate = useNavigate();
 
   const signupUser  =(e) =>{
@@ -21,6 +22,7 @@ const Signup = () => {
      
        
        console.log("User signed up successfully:", userCredential.user);
+       setMessage("Registered Successfully!");
        setName("");
        setEmail("");
        setPassword("");
