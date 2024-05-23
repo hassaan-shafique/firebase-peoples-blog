@@ -1,25 +1,49 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { getAuth } from 'firebase/auth';
+import { app } from './Firebase';
+
 
 const Login = () => {
+
+  const [email,setEmail] =useState ('');
+  const [password, setPassword] = useState("");
+
+
+  const handleLogin = ()=>{
+ 
+     
+
+  }
   return (
     <>
       <div className="Home">
         <div className="home-img">
           <img src="/home.jpg" width={750} height={695} alt="home-img" />
         </div>
+
+
         <div className="signup">
           <form className="signup-form">
             <h2 className="signup-head">Welcome Back, Login Here</h2>
             <label >Email: </label>
-            <input type="email"  placeholder=" Email" required />
+            <input 
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+            type="email" 
+             placeholder=" Email" 
+             required
+              />
             <label >Password: </label>
             <input
+            onChange={e=> setPassword(e.target.value)}
+            value={password}
               type="password"
               placeholder=" Password"
               required
             />
-            <button> Login</button>
+            <button type='submit' onClick={handleLogin}> Login</button>
             <div>
               Create an Account <Link to="/"> Signup</Link>
             </div>
