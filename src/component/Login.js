@@ -11,17 +11,15 @@ const Login = () => {
         <div className="signup">
           <form className="signup-form">
             <h2 className="signup-head">Welcome Back, Login Here</h2>
-            <label for="username">Email: </label>
-            <input type="email" id="email" name="email" placeholder=" Email" required />
-            <label for="username">Password: </label>
+            <label >Email: </label>
+            <input type="email"  placeholder=" Email" required />
+            <label >Password: </label>
             <input
               type="password"
-              id="password"
-              name="password"
               placeholder=" Password"
               required
             />
-            <button type="submit"> Login</button>
+            <button> Login</button>
             <div>
               Create an Account <Link to="/"> Signup</Link>
             </div>

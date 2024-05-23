@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 
 
+
   
 
 const Home = () => {
@@ -35,17 +36,21 @@ const Home = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               <li>
-                <Link className='link' to="/profile">Profile</Link>
+                <Link className="link" to="/profile">
+                  Profile
+                </Link>
               </li>
               <li>
-                <Link  className='link' to="/">Logout</Link>
+                <Link className="link" to="/">
+                  Logout
+                </Link>
               </li>
             </ul>
           )}
-         
         </div>
-       
       </nav>
+
+      
     </>
   );
 }

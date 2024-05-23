@@ -1,7 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { app } from './Firebase';
 
-const signup = () => {
+const auth = getAuth(app); 
+
+
+ 
+
+
+const Signup = () => {
+  const [name,setName] =useState ("");
+    const [email, setEmail] = useState(""); 
+  const [password,setPassword] = useState ("");
+
+  const signupUser  =(e) =>{
+    e.preventDefault();
+
+   createUserWithEmailAndPassword(auth, email, password)
+     .then((userCredential) => {
+       // Signed in
+       console.log("User signed up successfully:", userCredential.user);
+     })
+     .catch((error) => {
+       console.error("Error signing up:", error);
+
+
+     });
+  }
+
   return (
     <>
       <div className="Home">
@@ -11,29 +39,39 @@ const signup = () => {
         <div className="signup">
           <form className="signup-form">
             <h2 className="signup-head">Join us Today, Signup</h2>
-            <label for="username">Name: </label>
+            <label >Name: </label>
 
             <input 
+            onChange={e=>setName(e.target.value)}
+            value={name}
             type="text" 
-            id="name" 
-            name="username" 
+            
             placeholder=" Name" 
+            required
             />
-            <label for="username">Email: </label>
+            <label>Email: </label>
             <input 
+            onChange={e=>setEmail(e.target.value)}
+            value={email}
             type="email"
-             id="email"
-              name="email" 
+             
               placeholder=" Email"
+              required
                />
-            <label for="username">Password: </label>
+            <label >Password: </label>
             <input
+            onChange={e=>setPassword(e.target.value)}
+            value={password}
               type="password"
-              id="password"
-              name="password"
               placeholder=" Password"
+              required
             />
-            <button type="submit"> Signup</button>
+            
+
+            <button type='submit' onClick={signupUser}> Signup</button>
+
+           
+
             <div className='already'>
               Already have Account? <Link to="/login"> Login</Link>
             </div>
@@ -60,7 +98,8 @@ const signup = () => {
           </form>
         </div>
       </div>
+      
     </>
   );
 }
-export default signup
+export default Signup
