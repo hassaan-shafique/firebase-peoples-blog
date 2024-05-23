@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { app } from './Firebase';
+import { useNavigate } from 'react-router-dom';
 
 const auth = getAuth(app); 
-
-
- 
-
 
 const Signup = () => {
   const [name,setName] =useState ("");
@@ -20,12 +17,17 @@ const Signup = () => {
 
    createUserWithEmailAndPassword(auth, email, password)
      .then((userCredential) => {
-       // Signed in
+     
+       
        console.log("User signed up successfully:", userCredential.user);
+       setName("");
+       setEmail("");
+       setPassword("");
+      
+      
      })
      .catch((error) => {
        console.error("Error signing up:", error);
-
 
      });
   }
@@ -36,19 +38,21 @@ const Signup = () => {
         <div className="home-img">
           <img src="/home.jpg" width={750} height={695} alt="home-img" />
         </div>
+
+
         <div className="signup">
           <form className="signup-form">
             <h2 className="signup-head">Join us Today, Signup</h2>
-            <label >Name: </label>
 
+            <label >Name: </label>
             <input 
             onChange={e=>setName(e.target.value)}
             value={name}
             type="text" 
-            
             placeholder=" Name" 
             required
             />
+
             <label>Email: </label>
             <input 
             onChange={e=>setEmail(e.target.value)}
@@ -66,8 +70,6 @@ const Signup = () => {
               placeholder=" Password"
               required
             />
-            
-
             <button type='submit' onClick={signupUser}> Signup</button>
 
            
