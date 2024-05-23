@@ -1,21 +1,41 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { getAuth } from 'firebase/auth';
+import { getAuth , signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from './Firebase';
 
+
+
+
+const auth = getAuth(app); 
 
 const Login = () => {
 
   const [email,setEmail] =useState ('');
   const [password, setPassword] = useState("");
+   
+   const navigate = useNavigate();
 
 
-  const handleLogin = ()=>{
- 
-     
 
-  }
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    signInWithEmailAndPassword(auth ,email, password)
+      .then((userCredential) => {
+        console.log("Successfully logged in:", userCredential.user);
+      
+        setEmail("");
+        setPassword("");
+        navigate("/home"); 
+      })
+      
+      .catch((error) => {
+        console.error("Error logging in:", error);
+        
+        
+      });
+  };
   return (
     <>
       <div className="Home">
