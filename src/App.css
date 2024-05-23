@@ -177,12 +177,3 @@ cursor: pointer;
 
 
 
-.h-btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 200px;
-  right: 800px;
-}
-

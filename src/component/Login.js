@@ -29,9 +29,10 @@ const Login = () => {
         setPassword("");
         navigate("/home"); 
       })
-      
+
       .catch((error) => {
         console.error("Error logging in:", error);
+        
         
         
       });
