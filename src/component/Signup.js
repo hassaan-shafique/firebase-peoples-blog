@@ -40,7 +40,7 @@ const Signup = () => {
     <>
       <div className="Home">
         <div className="home-img">
-          <img src="/home.jpg" width={750} height={695} alt="home-img" />
+          <img src="/Brimston.png" width={750} height={695} alt="home-img" />
         </div>
 
 
