@@ -56,16 +56,20 @@ const Home = () => {
       </nav>
 
       <div className="search-menu">
-      
-        <div className='search-div'>
-          <input type="text" placeholder="Search Blogs" />
-          <button>Search</button>
+        <div className="search-div">
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search Blogs"
+          />
+          <button className="search-button">Search</button>
         </div>
 
         <div className="add-blogs">
           <button> Write Blog</button>
         </div>
       </div>
+      <hr />
     </>
   );
 }
