@@ -31,6 +31,7 @@ function App() {
           <Route index path="/" element={<Signup />} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
+          <Route path= '/myblogs' element ={''}/>
         </Routes>
       </BrowserRouter>
     </>

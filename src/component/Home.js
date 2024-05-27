@@ -41,6 +41,11 @@ const Home = () => {
                 </Link>
               </li>
               <li>
+                <Link className="link" to="/myblogs">
+                  My Blogs
+                </Link>
+              </li>
+              <li>
                 <Link className="link" to="/">
                   Logout
                 </Link>
@@ -50,7 +55,17 @@ const Home = () => {
         </div>
       </nav>
 
+      <div className="search-menu">
       
+        <div className='search-div'>
+          <input type="text" placeholder="Search Blogs" />
+          <button>Search</button>
+        </div>
+
+        <div className="add-blogs">
+          <button> Write Blog</button>
+        </div>
+      </div>
     </>
   );
 }
