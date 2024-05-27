@@ -140,9 +140,10 @@ nav{
 }
 
 .welcome-text{
-  color: white;
+  color: rgb(31, 26, 26);
   font: 800;
-  font-size: 18px;
+  font-size: 28px;
+  font-weight: 900;
 }
 
 
@@ -220,6 +221,11 @@ cursor: pointer;
 
 .add-blogs button {
 background: -webkit-linear-gradient(right, #aba8a8, #858080);
+
+
+
+
+
   color: white;
   padding: 15px 30px;
   border: none;
