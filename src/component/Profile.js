@@ -5,8 +5,8 @@ const welcome = "Hello";
 
 const Profile = () => {
 
-  const [firstname, setFirstname] = useState("");
-   const [lastname, setLastname] = useState("");
+  const [name, setName] = useState("");
+
     const [bio, setBio] = useState("");
      const [email, setemail] = useState("");
       const [title, settitle] = useState("");
@@ -18,20 +18,34 @@ const Profile = () => {
         <h1> {welcome.user} </h1>
 
         <form>
+        
           <label>First Name</label>
-          <input type="text" placeholder='First Name' />
-         <label>Last Name</label>
-          <input type="text" placeholder='Last Name' />
+          <input 
+          type="text" 
+          placeholder='First Name' 
+          value={name}
+          />
+        
           <label>Bio</label>
-          <input type='text'/>
+          <input type='text'
+            value={bio}
+          />
           <label>Email:</label>
-          <input type="email"  placeholder='Write Your Email'/>
+          <input 
+          type="email" 
+           placeholder='Write Your Email'
+            value={email}
+           />
           <label>Projects</label>
           <label>Title</label>
 
-          <input type='text'/>
+          <input type='text' 
+            value={title}
+          />
           <label>Description</label>
-         <textarea/>
+         <textarea 
+          value={description}
+         />
          <button type='submit'> Save</button>
         </form>
       </div>
