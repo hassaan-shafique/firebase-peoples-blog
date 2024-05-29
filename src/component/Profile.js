@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 const welcome = "Hello";
 
+
+
 const Profile = () => {
+
+  const [firstname, setFirstname] = useState("");
+   const [lastname, setLastname] = useState("");
+    const [bio, setBio] = useState("");
+     const [email, setemail] = useState("");
+      const [title, settitle] = useState("");
+       const [description, setDescription] = useState("");
+  
   return (
     <>
       <div className="profile">
