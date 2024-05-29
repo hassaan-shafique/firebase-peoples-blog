@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-const welcome = "Hello";
+import React, { useState } from 'react';
 
 
 
@@ -8,45 +7,71 @@ const Profile = () => {
   const [name, setName] = useState("");
 
     const [bio, setBio] = useState("");
-     const [email, setemail] = useState("");
-      const [title, settitle] = useState("");
+     const [email, setEmail] = useState("");
+      const [title, setTitle] = useState("");
        const [description, setDescription] = useState("");
+      
+
+       const handleSubmit = (e)=>{
+        e.preventDefault()
+
+         const profileData = {
+           name,
+           bio,
+           email,
+           title,
+           description,
+         };
+         console.log("ProfileData:", profileData);
+
+      
+       }
   
   return (
     <>
       <div className="profile">
-        <h1> {welcome.user} </h1>
+      
 
-        <form>
-        
-          <label>First Name</label>
-          <input 
-          type="text" 
-          placeholder='First Name' 
-          value={name}
+        <form onSubmit={handleSubmit}>
+          <label> Name</label>
+          <input
+            onChange={(e) => setName(e.target.value)}
+            name="name"
+            type="text"
+            placeholder=" Name"
+            value={name}
           />
-        
+
           <label>Bio</label>
-          <input type='text'
+          <input
+            onChange={(e) => setBio(e.target.value)}
+            name="bio"
+            type="text"
             value={bio}
           />
           <label>Email:</label>
-          <input 
-          type="email" 
-           placeholder='Write Your Email'
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            type="email"
+            placeholder="Write Your Email"
             value={email}
-           />
+          />
           <label>Projects</label>
           <label>Title</label>
 
-          <input type='text' 
+          <input
+            onChange={(e) => setTitle(e.target.value)}
+            name="title"
+            type="text"
             value={title}
           />
           <label>Description</label>
-         <textarea 
-          value={description}
-         />
-         <button type='submit'> Save</button>
+          <textarea
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+          />
+          <button type="submit"> Save</button>
         </form>
       </div>
     </>
