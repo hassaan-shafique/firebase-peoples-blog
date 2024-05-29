@@ -1,3 +1,4 @@
+import { QueryLimitConstraint } from 'firebase/firestore';
 import React from 'react';
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
@@ -66,7 +67,9 @@ const Home = () => {
         </div>
 
         <div className="add-blogs">
-          <button className='add-blog-btn'> Write Blog</button>
+          <Link to="/createblog">
+            <button className="add-blog-btn"> Write Blog</button>
+          </Link>
         </div>
       </div>
       <hr />
