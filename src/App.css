@@ -217,15 +217,13 @@ cursor: pointer;
 }
 .add-blogs {
   text-align: center;
+  font: 800;
 }
 
-.add-blogs button {
-background: -webkit-linear-gradient(right, #aba8a8, #858080);
-
-
-
-
-
+.add-blog-btn {
+background-color: black;
+color: white;
+font: 800;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -235,8 +233,8 @@ background: -webkit-linear-gradient(right, #aba8a8, #858080);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  
 }
-
-.add-blogs button:hover {
-  background-color: #0069d9;
+.add-blog-btn:hover{
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 

@@ -6,6 +6,7 @@ import Login from './component/Login.js';
 import Home from './component/Home.js';
 
 import { app } from './component/Firebase.js';
+import Profile from './component/Profile.js';
 
 //this is for sending data in firebase
 // import { getDatabase, ref ,set } from 'firebase/database';
@@ -32,6 +33,8 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
           <Route path= '/myblogs' element ={''}/>
+             <Route path ='/profile' element={<Profile/>} />
+       
         </Routes>
       </BrowserRouter>
     </>

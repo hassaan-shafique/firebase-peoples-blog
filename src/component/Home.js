@@ -66,7 +66,7 @@ const Home = () => {
         </div>
 
         <div className="add-blogs">
-          <button> Write Blog</button>
+          <button className='add-blog-btn'> Write Blog</button>
         </div>
       </div>
       <hr />
