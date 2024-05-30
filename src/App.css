@@ -181,18 +181,18 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:500px;
+  gap:400px;
   margin-top: 20px;
 
 }
 .search-div {
  
   display: flex;
-  margin: 10px 0;
+  margin: 10px ;
 }
 
 .search-input {
- width: 400px;
+ width: 500px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -208,7 +208,7 @@ cursor: pointer;
 .search-button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #007bff;
+ background-color: black;
   color: white;
   border: none;
   border-radius: 5px;

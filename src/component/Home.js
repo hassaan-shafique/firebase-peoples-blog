@@ -42,11 +42,6 @@ const Home = () => {
                 </Link>
               </li>
               <li>
-                <Link className="link" to="/myblogs">
-                  My Blogs
-                </Link>
-              </li>
-              <li>
                 <Link className="link" to="/">
                   Logout
                 </Link>
