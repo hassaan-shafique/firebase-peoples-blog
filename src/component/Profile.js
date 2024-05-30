@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { getDatabase, ref,  child } from "firebase/database";
+import { app } from './Firebase.js';
 
+const db = getDatabase(app);
 
 
 const Profile = () => {
 
   const [name, setName] = useState("");
-
     const [bio, setBio] = useState("");
      const [email, setEmail] = useState("");
       const [title, setTitle] = useState("");
        const [description, setDescription] = useState("");
+       
       
 
        const handleSubmit = (e)=>{
@@ -70,7 +73,7 @@ const Profile = () => {
             onChange={(e) => setDescription(e.target.value)}
             value={description}
           />
-          <button type="submit"> Save</button>
+          <button type="submit">Save</button>
         </form>
       </div>
     </>
