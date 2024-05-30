@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { getDatabase, ref,  child } from "firebase/database";
 import { app } from './Firebase.js';
 
-const db = getDatabase(app);
+// import { getDatabase, ref ,set } from 'firebase/database';
 
+// const db =getDatabase(app);
 
 const Profile = () => {
 
@@ -26,8 +26,7 @@ const Profile = () => {
            description,
          };
          console.log("ProfileData:", profileData);
-
-      
+    
        }
   
   return (

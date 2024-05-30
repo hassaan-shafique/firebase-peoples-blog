@@ -34,7 +34,6 @@ function App() {
           <Route index path="/" element={<Signup />} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
-          <Route path= '/myblogs' element ={<Blog/>}/>
              <Route path ='/profile' element={<Profile/>} />
              <Route path='/createblog' element= {<CreateBlog/>}/>
        
