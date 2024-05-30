@@ -30,9 +30,8 @@ const Profile = () => {
   return (
     <>
       <div className="profile">
-      
-
         <form onSubmit={handleSubmit}>
+        
           <label> Name</label>
           <input
             onChange={(e) => setName(e.target.value)}
