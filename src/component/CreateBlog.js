@@ -10,6 +10,10 @@ const CreateBlog = () => {
           <input placeholder="Your Blog Title" type="text" />
           <label>Upload Your Image</label>
           <input type="file" />
+
+          <div className='editor'>
+            Box 
+          </div>
         </div>
       </div>
     </>
