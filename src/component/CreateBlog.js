@@ -12,7 +12,7 @@ const CreateBlog = () => {
           <input type="file" />
 
           <div className='editor'>
-            Box 
+            Rich Text Editor
           </div>
         </div>
       </div>
