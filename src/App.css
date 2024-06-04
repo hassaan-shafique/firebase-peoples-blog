@@ -179,14 +179,101 @@ cursor: pointer;
 }
 /* profile */
 
-.profile{
+.profile {
+  /* Style the overall profile container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 400px;
+  /* Adjust width as needed */
+}
+
+.profile-picture-input {
+  /* Style the profile picture input */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.name-bio,
+.email,
+.project {
+  /* Style each section (name-bio, email, project) */
+  margin-bottom: 15px;
+}
+
+.name-input,
+.bio-input,
+.email-input,
+.project-title-input {
+  /* Style all text input fields */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.description-textarea {
+  /* Style the description textarea */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 100px;
+}
+
+.save-button {
+  /* Style the save button */
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+  /* Green hover */
+}
+.profile-picture-input {
+  /* Style the profile picture input */
+  margin-bottom: 10px;
+  border: none;
+  /* Remove default border */
+  padding: 30px;
+  /* Adjust padding for content */
+  border-radius: 70%;
+  /* Make it a circle */
+  background-color: #f1f1f1;
+  /* Light background */
+  cursor: pointer;
+  /* Indicate clickable area */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  
 }
 
+.profile-picture-input:hover {
+  background-color: #ddd;
+  /* Hover effect */
+}
+
+.profile-picture-input input[type="file"] {
+  /* Hide the default file input */
+  display: none;
+}
 /* dashboard css */
 .search-menu{
   display: flex;

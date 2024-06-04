@@ -14,6 +14,9 @@ const [picture, setPicture] =useState('');
       const [title, setTitle] = useState("");
        const [description, setDescription] = useState("");
        
+
+       
+
       
 
        const handleSubmit = (e)=>{
@@ -41,36 +44,43 @@ const [picture, setPicture] =useState('');
             type="file"
             value={picture}
             name="picture"
+            accept="image/*"
             placeholder="profile picture"
+            className="profile-picture-input"
           />
-          <div>
-            <label> Name</label>
+          <div className="name-bio">
+            <label>Name</label>
             <input
               onChange={(e) => setName(e.target.value)}
               name="name"
               type="text"
               placeholder=" Name"
               value={name}
+              className="name-input"
             />
 
-            <label>Bio</label>
+            <label>Bio:</label>
             <input
               onChange={(e) => setBio(e.target.value)}
               name="bio"
               type="text"
               value={bio}
+              className="bio-input"
             />
           </div>
-          <label>Email:</label>
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            type="email"
-            placeholder="Write Your Email"
-            value={email}
-          />
-          <div>
-            <label>Projects</label>
+          <div className="email">
+            <label>Email:</label>
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              type="email"
+              placeholder="Write Your Email"
+              value={email}
+              className="email-input"
+            />
+          </div>
+          <div className="project">
+            <h3>Projects</h3>
             <label>Title</label>
 
             <input
@@ -78,6 +88,7 @@ const [picture, setPicture] =useState('');
               name="title"
               type="text"
               value={title}
+              className="project-title-input"
             />
           </div>
           <div>
@@ -85,10 +96,13 @@ const [picture, setPicture] =useState('');
             <textarea
               onChange={(e) => setDescription(e.target.value)}
               value={description}
+              className="description-textarea"
             />
           </div>
 
-          <button type="submit">Save</button>
+          <button type="submit" className="save-button">
+            Save
+          </button>
         </form>
       </div>
     </>
