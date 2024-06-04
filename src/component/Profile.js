@@ -7,6 +7,7 @@ import { app } from './Firebase.js';
 
 const Profile = () => {
 
+const [picture, setPicture] =useState('');
   const [name, setName] = useState("");
     const [bio, setBio] = useState("");
      const [email, setEmail] = useState("");
@@ -19,6 +20,7 @@ const Profile = () => {
         e.preventDefault()
 
          const profileData = {
+          picture,
            name,
            bio,
            email,
@@ -33,23 +35,32 @@ const Profile = () => {
     <>
       <div className="profile">
         <form onSubmit={handleSubmit}>
-        
-          <label> Name</label>
+          <label>Profile Picture</label>
           <input
-            onChange={(e) => setName(e.target.value)}
-            name="name"
-            type="text"
-            placeholder=" Name"
-            value={name}
+            onChange={(e) => setPicture(e.target.value)}
+            type="file"
+            value={picture}
+            name="picture"
+            placeholder="profile picture"
           />
+          <div>
+            <label> Name</label>
+            <input
+              onChange={(e) => setName(e.target.value)}
+              name="name"
+              type="text"
+              placeholder=" Name"
+              value={name}
+            />
 
-          <label>Bio</label>
-          <input
-            onChange={(e) => setBio(e.target.value)}
-            name="bio"
-            type="text"
-            value={bio}
-          />
+            <label>Bio</label>
+            <input
+              onChange={(e) => setBio(e.target.value)}
+              name="bio"
+              type="text"
+              value={bio}
+            />
+          </div>
           <label>Email:</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
@@ -58,20 +69,25 @@ const Profile = () => {
             placeholder="Write Your Email"
             value={email}
           />
-          <label>Projects</label>
-          <label>Title</label>
+          <div>
+            <label>Projects</label>
+            <label>Title</label>
 
-          <input
-            onChange={(e) => setTitle(e.target.value)}
-            name="title"
-            type="text"
-            value={title}
-          />
-          <label>Description</label>
-          <textarea
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
-          />
+            <input
+              onChange={(e) => setTitle(e.target.value)}
+              name="title"
+              type="text"
+              value={title}
+            />
+          </div>
+          <div>
+            <label>Description</label>
+            <textarea
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            />
+          </div>
+
           <button type="submit">Save</button>
         </form>
       </div>
