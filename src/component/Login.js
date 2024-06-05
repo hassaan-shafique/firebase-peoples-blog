@@ -24,6 +24,8 @@ const Login = () => {
     signInWithEmailAndPassword(auth ,email, password)
       .then((userCredential) => {
         console.log("Successfully logged in:", userCredential.user);
+        alert("logged in Successfully Click OK to Continue"
+        )
       
         setEmail("");
         setPassword("");
@@ -32,6 +34,7 @@ const Login = () => {
 
       .catch((error) => {
         console.error("Error logging in:", error);
+        alert("Incorrect Email and Password")
 
         
         
