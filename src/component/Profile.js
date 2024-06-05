@@ -6,13 +6,26 @@ import { app } from './Firebase.js';
 // const db =getDatabase(app);
 
 const Profile = () => {
+  const [formData,setFromData] =useState ({
+    picture:'',
+    name :'',
+    bio: '',
+    email: '',
+   title:'',
+   description: '',
+    
 
-const [picture, setPicture] =useState('');
-  const [name, setName] = useState("");
-    const [bio, setBio] = useState("");
-     const [email, setEmail] = useState("");
-      const [title, setTitle] = useState("");
-       const [description, setDescription] = useState("");
+  })
+
+// const [picture, setPicture] =useState('');
+//   const [name, setName] = useState("");
+//     const [bio, setBio] = useState("");
+//      const [email, setEmail] = useState("");
+//       const [title, setTitle] = useState("");
+//        const [description, setDescription] = useState("");
+
+       //to display the form data we will make a hook  by formdta then 
+       //onchange in the form {(e)=> set}
        
 
        
@@ -22,15 +35,15 @@ const [picture, setPicture] =useState('');
        const handleSubmit = (e)=>{
         e.preventDefault()
 
-         const profileData = {
-          picture,
-           name,
-           bio,
-           email,
-           title,
-           description,
-         };
-         console.log("ProfileData:", profileData);
+        //  const profileData = {
+        //   picture,
+        //    name,
+        //    bio,
+        //    email,
+        //    title,
+        //    description,
+        //  };
+         console.log("ProfileData:", formData);
     
        }
   
@@ -40,9 +53,9 @@ const [picture, setPicture] =useState('');
         <form onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <input
-            onChange={(e) => setPicture(e.target.value)}
+            onChange={(e) => setFromData({...formData, picture: e.target.value})}
             type="file"
-            value={picture}
+            value={formData.picture}
             name="picture"
             accept="image/*"
             placeholder="profile picture"
@@ -51,31 +64,31 @@ const [picture, setPicture] =useState('');
           <div className="name-bio">
             <label>Name</label>
             <input
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setFromData({ ...formData, name: e.target.value})}
               name="name"
               type="text"
               placeholder=" Name"
-              value={name}
+              value={formData.name}
               className="name-input"
             />
 
             <label>Bio:</label>
             <input
-              onChange={(e) => setBio(e.target.value)}
+              onChange={(e) => setFromData({...formData, bio: e.target.value})}
               name="bio"
               type="text"
-              value={bio}
+              value={formData.bio}
               className="bio-input"
             />
           </div>
           <div className="email">
             <label>Email:</label>
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setFromData({...formData, email: e.target.value})}
               name="email"
               type="email"
               placeholder="Write Your Email"
-              value={email}
+              value={formData.email}
               className="email-input"
             />
           </div>
@@ -84,18 +97,18 @@ const [picture, setPicture] =useState('');
             <label>Title</label>
 
             <input
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={(e) => setFromData({...formData, title: e.target.value})}
               name="title"
               type="text"
-              value={title}
+              value={formData.title}
               className="project-title-input"
             />
           </div>
           <div>
             <label>Description</label>
             <textarea
-              onChange={(e) => setDescription(e.target.value)}
-              value={description}
+              onChange={(e) => setFromData( {...formData, description: e.target.value})}
+              value={formData.description}
               className="description-textarea"
             />
           </div>
@@ -104,6 +117,12 @@ const [picture, setPicture] =useState('');
             Save
           </button>
         </form>
+      </div>
+
+      {/* //displaying the form Data  */}
+       <div> 
+      <h1> Name : {formData.name}</h1>
+      <h1> Bio: {formData.bio}</h1>
       </div>
     </>
   );
