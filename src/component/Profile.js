@@ -35,14 +35,7 @@ const Profile = () => {
        const handleSubmit = (e)=>{
         e.preventDefault()
 
-        //  const profileData = {
-        //   picture,
-        //    name,
-        //    bio,
-        //    email,
-        //    title,
-        //    description,
-        //  };
+    
          console.log("ProfileData:", formData);
     
        }
@@ -113,7 +106,7 @@ const Profile = () => {
             />
           </div>
 
-          <button type="submit" className="save-button">
+          <button  onClick={handleSubmit} type="submit" className="save-button">
             Save
           </button>
         </form>
