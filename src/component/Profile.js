@@ -117,7 +117,8 @@ const Profile = () => {
       <h1> Name : {formData.name}</h1>
       <h1> Bio: {formData.bio}</h1>
       </div>
-      <div> <h1>HEllo this is firbase</h1></div>
+     
+     
     </>
   );
 }
