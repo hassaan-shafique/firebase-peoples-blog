@@ -6,10 +6,12 @@ import Home from './Home'
 
 
 
+
 const Google = () => {
   const [value ,setValue] = useState('');
   const handleClick= () =>{
     signInWithPopup(auth,provider) .then ((data) =>{
+      
    setValue(data.user.email)
    localStorage.setItem ("email", data.user.email)
     })
