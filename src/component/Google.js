@@ -1,6 +1,6 @@
 import React from 'react'
 
-const google = () => {
+const Google = () => {
   return (
     <div>
       <button className="google-btn">
@@ -11,4 +11,4 @@ const google = () => {
   );
 }
 
-export default google
+export default Google

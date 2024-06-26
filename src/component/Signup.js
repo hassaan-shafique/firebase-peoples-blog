@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { app } from './Firebase';
 import { useNavigate } from 'react-router-dom';
+import Google from './Google';
 
 const auth = getAuth(app); 
 
@@ -87,8 +88,11 @@ const Signup = () => {
                 <div className="or-text">OR</div>
                 <div className="line"></div>
               </div>
+
+
+              <Google/>
               
-                <button className='google-btn'>
+                {/* <button className='google-btn'>
                 <img
                   src="/google.svg"
                   width={25}
@@ -97,7 +101,7 @@ const Signup = () => {
                 />
                 Continue with Google
                 </button>
-              
+               */}
 
             </div>
             

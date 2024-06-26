@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { getAuth , signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from './Firebase';
-import Google from 'component/Google';
+import Google from './Google';
 
 
 
