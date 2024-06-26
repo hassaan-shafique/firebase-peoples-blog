@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { getAuth , signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from './Firebase';
+import Google from 'component/Google';
 
 
 
@@ -78,9 +79,11 @@ const Login = () => {
                 <div className="or-text">OR</div>
                 <div className="line"></div>
               </div>
-
               
-                <button className='google-btn'>
+
+              <Google/>
+              
+                {/* <button className='google-btn'>
                   <img
                     src="/google.svg"
                     width={25}
@@ -88,7 +91,7 @@ const Login = () => {
                     alt="google img"
                   />
                   Continue with Google
-                </button>
+                </button> */}
               
             </div>
           </form>
