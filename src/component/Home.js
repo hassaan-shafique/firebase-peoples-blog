@@ -69,7 +69,7 @@ const Home = () => {
       </div>
 
       <hr />
-      <div className="main-card">
+      {/* <div className="main-card">
         <div className="card">
           <img src="home.jpg" width={300} height={210} alt="card image" />
           <h1>Master React </h1>
@@ -98,7 +98,7 @@ const Home = () => {
           <h6>By Hassaan Shafiue</h6>
           <button>View</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
