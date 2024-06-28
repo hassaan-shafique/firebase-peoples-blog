@@ -27,6 +27,7 @@ const Google = () => {
   useEffect (()=>{
     setValue(localStorage.getItem('email'))
   })
+  
   return (
     <div>
     
