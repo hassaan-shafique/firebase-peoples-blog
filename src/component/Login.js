@@ -25,7 +25,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth ,email, password)
       .then((userCredential) => {
         console.log("Successfully logged in:", userCredential.user);
-        alert("logged in Successfully Click OK to Continue" )
+        
       
         setEmail("");
         setPassword("");
