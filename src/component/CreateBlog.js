@@ -13,7 +13,7 @@ const CreateBlog = () => {
 
           <div className='editor'>
             Rich Text Editor
-            <h1>This is Rich text editor</h1>
+          
           </div>
         </div>
       </div>
