@@ -1,47 +1,57 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-//import "quill/dist/quill.core.css";
+//import Image from 'quill-image-uploader'; // For image uploads
 
 const CreateBlog = () => {
-  const [value, setValue] = useState ('');
- const toolbarOptions = [
-   ["bold", "italic", "underline", "strike"], // toggled buttons
-   ["blockquote", "code-block"],
-   ["link", "image", "video", "formula"],
+  const [value, setValue] = useState('');
+  const [title, setTitle] = useState('');
 
-   [{ header: 1 }, { header: 2 }], // custom button values
-   [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
-   [{ script: "sub" }, { script: "super" }], // superscript/subscript
-   [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-   [{ direction: "rtl" }], // text direction
 
-   [{ size: ["small", false, "large", "huge"] }], // custom dropdown
-   [{ header: [1, 2, 3, 4, 5, 6, false] }],
-
-   [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-   [{ font: [] }],
-   [{ align: [] }],
-
-   ["clean"], // remove formatting button
- ];
-
+  // Configure Quill modules (including image upload)
  
-   const modules=[
-    {
-     toolbar: toolbarOptions,
-   },
+
+  const toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike', 'image'], // Text formatting
+    [{ header: [1, 2,3,4, false] }], // Headings
+    ['blockquote', 'code-block'], // Block elements
+    [{ list: 'ordered'}, { list: 'bullet' }], // Lists
+    [{ script: 'sub'}, { script: 'super' }], // Superscript/subscript
+    [{ indent: '-1'}, { indent: '+1' }], // Text indentation
+    [{ direction: 'rtl' }], // Text direction
+    [{ size: ['small', false, 'large', 'huge'] }], // Text size
+    [{ color: [] }, { background: [] }], // Text color and background
+    [{ font: [] }], // Font selection
+    [{ align: [] }], // Text alignment
+    ['clean'], // Clear formatting
+    ['link', 'image', 'video', 'formula'], // Essential content elements
+
+  
   ];
+   const modules = [{ toolbar: toolbarOptions }];
+
+  const handleBlogSubmit = (event) => {
+    event.preventDefault();
+    // Logic to send title, featuredImage (if uploaded), and blog content to your backend
+    console.log('Blog content:', value);
+    console.log('Blog title:', title);
+    
+  };
 
   return (
     <>
+      <h1>Create Blog</h1>
       <div className="main-page">
         <div className="blog-main">
-          <h1>Write Your Blog</h1>
+          <label>Upload Featured Image</label>
+          <br />
           <label>Title</label>
-          <input placeholder="Your Blog Title" type="text" />
-          <label>Upload Your Image</label>
-          <input type="file" />
+          <input
+            placeholder="Your Blog Title"
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </div>
       </div>
       <ReactQuill
@@ -50,9 +60,9 @@ const CreateBlog = () => {
         value={value}
         onChange={setValue}
       />
+      <button onClick={handleBlogSubmit}>Publish Blog</button>
     </>
   );
-}
+};
 
-
-export default CreateBlog
+export default CreateBlog;
