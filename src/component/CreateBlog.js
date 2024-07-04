@@ -45,7 +45,7 @@ const CreateBlog = () => {
         <div className="blog-main">
           <div className="main-page">
             <div className="blog-main">
-              <label></label>
+              <label>Add Cover Image</label>
               <input type='file' />
               <br />
             
