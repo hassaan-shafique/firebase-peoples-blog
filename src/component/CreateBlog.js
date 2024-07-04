@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-//import Image from 'quill-image-uploader'; // For image uploads
+
 
 const CreateBlog = () => {
   const [value, setValue] = useState('');
   const [title, setTitle] = useState('');
 
 
-  // Configure Quill modules (including image upload)
+ 
  
 
   const toolbarOptions = [
@@ -28,11 +28,14 @@ const CreateBlog = () => {
 
   
   ];
-   const modules = [{ toolbar: toolbarOptions }];
+   const modules = {
+     toolbar: toolbarOptions,
+   };
 
   const handleBlogSubmit = (event) => {
     event.preventDefault();
     // Logic to send title, featuredImage (if uploaded), and blog content to your backend
+
     console.log('Blog content:', value);
     console.log('Blog title:', title);
     
@@ -41,33 +44,52 @@ const CreateBlog = () => {
   return (
     <>
       <h1>Create Blog</h1>
-    
-        <div className="blog-main">
-          <div className="main-page">
-            <div className="blog-main">
-              <label>Add Cover Image</label>
-              <input type='file' />
-              <br />
-            
-              <input
-                className="title-class"
-                placeholder="Your Blog Title Here ..."
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-               
-              />
-            </div>
+
+      <div className="blog-main">
+        <div className="main-page">
+          <div className="blog-main">
+            <label>Add Cover Image</label>
+            <input type="file" />
+            <br />
+
+            <input
+              className="title-class"
+              placeholder="Your Blog Title Here ..."
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
           </div>
-          <ReactQuill
-          className='quill'
-            module={modules}
-            theme="snow"
-            value={value}
-            onChange={setValue}
-          />
         </div>
-      
+        <ReactQuill
+          className="quill"
+          module={modules}
+          theme="snow"
+          value={value}
+          onChange={setValue}
+          formats={[
+            "header",
+            "font",
+            "size",
+            "bold",
+            "italic",
+            "underline",
+            "strike",
+            "blockquote",
+            "list",
+            "bullet",
+            "indent",
+            "link",
+            "image",
+            "video",
+            "color",
+            "background",
+            "align",
+            "code-block",
+            "script",
+          ]}
+        />
+      </div>
 
       <button className="add-blog-btn-2" onClick={handleBlogSubmit}>
         Publish Blog
