@@ -45,26 +45,22 @@ const CreateBlog = () => {
         <div className="blog-main">
           <div className="main-page">
             <div className="blog-main">
-              <label>Upload Featured Image</label>
+              <label></label>
+              <input type='file' />
               <br />
-              <label>Title</label>
+            
               <input
                 className="title-class"
-                placeholder="Your Blog Title"
+                placeholder="Your Blog Title Here ..."
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                style={{
-                  border: "none",
-                  outline: "none",
-                  padding: "10px",
-                  fontSize: "1.5rem",
-                  fontWeight: "bold",
-                }}
+               
               />
             </div>
           </div>
           <ReactQuill
+          className='quill'
             module={modules}
             theme="snow"
             value={value}
@@ -73,7 +69,7 @@ const CreateBlog = () => {
         </div>
       
 
-      <button className="add-blog-btn" onClick={handleBlogSubmit}>
+      <button className="add-blog-btn-2" onClick={handleBlogSubmit}>
         Publish Blog
       </button>
     </>

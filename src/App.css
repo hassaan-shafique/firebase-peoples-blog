@@ -370,11 +370,44 @@ font: 800;
   height: 400px;
 }
  .blog-main{
-  border: 1px solid black;
-  
+
+width: 90%;
+margin-left: 45px;
 
 
+}
+.title-class{
+  background-color: #CCCCCC;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 25px;
+  border: none;
+  outline: none;
+  width: 90%;
+}
+::placeholder{
+  color: #000;
+}
+.quill{
+/* background-color: rgb(184, 184, 184); */
+background-color: white;
+  height: 400px;
+  word-break: break-all;
+}
 
- 
+.add-blog-btn-2{
+  background-color: black;
+    color: white;
+    font: 800;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    margin-left: 45px;
 
 }
