@@ -51,6 +51,13 @@ const CreateBlog = () => {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            style={{
+              border: "none",
+              outline: "none",
+              padding: "10px",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+            }}
           />
         </div>
       </div>
@@ -60,7 +67,10 @@ const CreateBlog = () => {
         value={value}
         onChange={setValue}
       />
-      <button onClick={handleBlogSubmit}>Publish Blog</button>
+
+      <button className="add-blog-btn" onClick={handleBlogSubmit}>
+        Publish Blog
+      </button>
     </>
   );
 };

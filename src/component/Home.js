@@ -44,9 +44,8 @@ const Home = () => {
               <li>
                 <Link className="link" to="/">
                   Logout
-                </Link>
-                
-              </li>
+                </Link>       
+                       </li>
             </ul>
           )}
         </div>
