@@ -41,32 +41,37 @@ const CreateBlog = () => {
   return (
     <>
       <h1>Create Blog</h1>
-      <div className="main-page">
+    
         <div className="blog-main">
-          <label>Upload Featured Image</label>
-          <br />
-          <label>Title</label>
-          <input
-            placeholder="Your Blog Title"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            style={{
-              border: "none",
-              outline: "none",
-              padding: "10px",
-              fontSize: "1.5rem",
-              fontWeight: "bold",
-            }}
+          <div className="main-page">
+            <div className="blog-main">
+              <label>Upload Featured Image</label>
+              <br />
+              <label>Title</label>
+              <input
+                className="title-class"
+                placeholder="Your Blog Title"
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                style={{
+                  border: "none",
+                  outline: "none",
+                  padding: "10px",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                }}
+              />
+            </div>
+          </div>
+          <ReactQuill
+            module={modules}
+            theme="snow"
+            value={value}
+            onChange={setValue}
           />
         </div>
-      </div>
-      <ReactQuill
-        module={modules}
-        theme="snow"
-        value={value}
-        onChange={setValue}
-      />
+      
 
       <button className="add-blog-btn" onClick={handleBlogSubmit}>
         Publish Blog
