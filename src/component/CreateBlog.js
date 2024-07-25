@@ -43,13 +43,15 @@ const CreateBlog = () => {
 
   return (
     <>
-      <h1 className='create-head'>Share Your Thoughts With People's Blog</h1>
+      <h1 className="create-head">Share Your Thoughts With People's Blog</h1>
 
       <div className="blog-main">
         <div className="main-page">
           <div className="blog-main">
-            <label>Add Cover Image</label>
-            <input type="file" />
+            <button>
+              <label>Add Cover Image</label>
+              <input type="file" />
+            </button>
             <br />
 
             <input
