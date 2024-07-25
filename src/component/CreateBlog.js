@@ -43,7 +43,7 @@ const CreateBlog = () => {
 
   return (
     <>
-      <h1>Create Blog</h1>
+      <h1>Share Your Thoughts with People's Blog</h1>
 
       <div className="blog-main">
         <div className="main-page">
