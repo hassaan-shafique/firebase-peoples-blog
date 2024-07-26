@@ -101,3 +101,6 @@ const CreateBlog = () => {
 };
 
 export default CreateBlog;
+//get the image from the user and display that image this image will be the cover image of the blog 
+//after that user can write the data in the blog and  save that blog data in firebase and create a document and make a collection inside that and save all the blogs data in the Firebase.
+//get the blog data from the firebase and display that in the homepage of the blog website.
